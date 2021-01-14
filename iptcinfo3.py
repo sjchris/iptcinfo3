@@ -800,7 +800,8 @@ class IPTCInfo:
                         try:
                             cs = unpack('!H', temp)[0]
                         except Exception:  # TODO better exception
-                            logger.warning('WARNING: problems with charset recognition (%r)', temp)
+                            #commenting out to supporess unsupressable warning with warning level set
+                            #logger.warning('WARNING: problems with charset recognition (%r)', temp)
                             cs = None
                         if cs in c_charset:
                             self.inp_charset = c_charset[cs]
